@@ -27,6 +27,8 @@ echo "Moving any existing dotfiles from ~ to $olddir"
 for file in $files; do
     if [[ -f ~/.$file || -d ~/.$file ]]; then
         mv ~/.$file ~/dotfiles_old/
+    fi
+    if [[ -f $dir/$file || -d $dir/$file ]]; then
         echo "Creating symlink to $file in home directory."
         ln -s $dir/$file ~/.$file
     fi
