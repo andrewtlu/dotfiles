@@ -115,3 +115,8 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# run neofetch on ssh connections
+if [ -n $SSH_CONNECTION ]; then
+    neofetch
+fi
