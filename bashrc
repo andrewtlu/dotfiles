@@ -131,3 +131,8 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# run neofetch on ssh connections
+if [ -n $SSH_CONNECTION ]; then
+    neofetch
+fi
+
