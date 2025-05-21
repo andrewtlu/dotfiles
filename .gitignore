@@ -1,2 +1,7 @@
 .config/Code
+.config/dconf
+.config/go
+.config/kde.org
+.config/session
+.config/systemd
 
