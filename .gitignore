@@ -1,3 +1,6 @@
+Pictures/*
+!Pictures/Wallpapers
+!Pictures/Wallpapers/**
 .config/Code
 .config/dconf
 .config/go
