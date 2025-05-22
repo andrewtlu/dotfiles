@@ -1,0 +1,65 @@
+// -*- mode: jsonc -*-
+{
+    "layer": "top",
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["wireplumber", "network", "bluetooth", "clock"],
+
+    // "custom/launcher": {
+    //     "format": " ",
+    //     "on-click": "sh ~/.config/rofi/launchers/type-2/launcher.sh",
+    //     "on-click-right": "killall rofi"	
+    // },
+
+    // "backlight": {
+    //     "tooltip": false,
+    //     "format": " {}%",
+    //     "interval": 1,
+    //     "on-scroll-up": "light -A 5",
+    //     "on-scroll-down": "light -U 5"
+    // },
+
+    "wireplumber": {
+        "tooltip": false,
+        "scroll-step": 5,
+	"format": "{icon} {volume}%",
+	"format-muted": "󰝟 {volume}%",
+	"on-click": "kitty -- alsamixer -V all",
+	"format-icons": {
+	    "default": ["", "", ""]
+	}
+    },
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+            "format-icons": {
+                "active": "",
+                "default": "",
+                "empty": ""
+            },
+            "persistent-workspaces": {
+                "*": [ 1,2,3 ]
+            }
+    },
+
+    "network": {
+        "tooltip": false,
+	"format-wifi": "  {essid}",
+	"format-ethernet": "  {ifname}",
+	"on-click": "kitty -- nmtui"
+    },
+
+    "bluetooth": {
+        "format-on": "󰂯",
+        "format-off": "󰂲",
+        "format-connected-battery": "{device_battery_percentage}% 󰂯",
+	"tooltip": false,
+        "on-click": "kitty -- bluetui"
+    },
+
+    "clock": {
+        "format": "{:%H:%M - %a, %d %b %Y}",
+        "tooltip": false
+    }
+}
