@@ -1,9 +1,12 @@
+@import url("dark.css");
+
 * {
   border: none;
-  border-radius: 8;
+  border-radius: 8px;
   font-family: "MesloLGS Nerd Font";
-  font-size: 16px;
+  font-size: 14px;
   min-height: 20px;
+  transition: all;
 }
 
 window#waybar {
