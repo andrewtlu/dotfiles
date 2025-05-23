@@ -15,6 +15,7 @@ I use arch btw 🤓
 
 ### Other Stuff
 
+* impala
 * oh-my-zsh
 * p10k
 * pipewire

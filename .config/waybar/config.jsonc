@@ -12,50 +12,42 @@
     //     "on-click-right": "killall rofi"	
     // },
 
-    // "backlight": {
-    //     "tooltip": false,
-    //     "format": " {}%",
-    //     "interval": 1,
-    //     "on-scroll-up": "light -A 5",
-    //     "on-scroll-down": "light -U 5"
-    // },
-
     "wireplumber": {
         "tooltip": false,
         "scroll-step": 5,
-	"format": "{icon} {volume}%",
-	"format-muted": "󰝟 {volume}%",
-	"on-click": "kitty -- alsamixer -V all",
-	"format-icons": {
-	    "default": ["", "", ""]
-	}
+        "format": "{icon} {volume}%",
+        "format-muted": "󰝟 {volume}%",
+        "on-click": "kitty -- alsamixer -V all",
+        "format-icons": {
+            "default": ["", "", ""]
+        }
     },
 
     "hyprland/workspaces": {
         "format": "{icon}",
         "on-click": "activate",
-            "format-icons": {
-                "active": "",
-		"urgent": "",
-                "default": ""
-            },
-            "persistent-workspaces": {
-                "*": [ 1,2,3 ]
-            }
+        "format-icons": {
+            "active": "",
+            "urgent": "",
+            "default": ""
+        },
+        "persistent-workspaces": {
+            "*": [1, 2, 3]
+        }
     },
 
     "network": {
         "tooltip": false,
-	"format-wifi": "  {essid}",
-	"format-ethernet": "  {ifname}",
-	"on-click": "kitty -- nmtui"
+        "format-wifi": "  {essid}",
+        "format-ethernet": "  {ifname}",
+        "on-click": "kitty -- impala"
     },
 
     "bluetooth": {
         "format-on": "󰂯",
         "format-off": "󰂲",
         "format-connected-battery": "{device_battery_percentage}% 󰂯",
-	"tooltip": false,
+        "tooltip": false,
         "on-click": "kitty -- bluetui"
     },
 
