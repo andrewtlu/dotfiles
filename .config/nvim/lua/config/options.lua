@@ -4,3 +4,4 @@
 
 local opt = vim.opt
 opt.shiftwidth = 4
+vim.cmd("autocmd FileType css setlocal shiftwidth=2")
