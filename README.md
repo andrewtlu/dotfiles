@@ -18,7 +18,9 @@ I use arch btw 🤓
 * oh-my-zsh
 * p10k
 * pipewire
+* pywal16
 * stow
 * wireplumber
+* wofi
 * zsh
 

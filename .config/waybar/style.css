@@ -6,7 +6,6 @@
   font-family: "MesloLGS Nerd Font";
   font-size: 14px;
   min-height: 20px;
-  transition: all;
 }
 
 window#waybar {
