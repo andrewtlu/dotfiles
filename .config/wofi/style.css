@@ -1,0 +1,62 @@
+@import ".cache/wal/colors-waybar.css";
+
+/* Add your wofi styling here */
+window {
+  margin: 5px;
+  border: 2px red;
+  background-color: red;
+}
+
+#input {
+  margin: 5px;
+  border: 2px solid blue;
+  background-color: blue;
+}
+
+#inner-box {
+  margin: 5px;
+  border: 2px solid yellow;
+  background-color: yellow;
+}
+
+#outer-box {
+  margin: 5px;
+  border: 2px solid green;
+  background-color: green;
+}
+
+#scroll {
+  margin: 5px;
+  border: 2px solid orange;
+  background-color: orange;
+}
+
+#text {
+  margin: 5px;
+  border: 2px solid cyan;
+  background-color: cyan;
+}
+
+/* Page styling to appear more like wofi does */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+window {
+  width: 30%;
+  display: block;
+}
+
+input {
+  width: calc(100% - 20px);
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  margin: 10px;
+}
+
