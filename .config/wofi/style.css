@@ -1,62 +1,74 @@
 @import ".cache/wal/colors-waybar.css";
 
-/* Add your wofi styling here */
+* {
+    font-family: "MesloLGS Nerd Font", monospace;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
 window {
-  margin: 5px;
-  border: 2px red;
-  background-color: red;
+    width: 30%
+    margin: 0px;
+    padding: 5px;
+    background-color: transparent;
 }
 
 #input {
-  margin: 5px;
-  border: 2px solid blue;
-  background-color: blue;
+    margin: 5px;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    color: @color15;
+    font-weight: bold;
 }
 
-#inner-box {
-  margin: 5px;
-  border: 2px solid yellow;
-  background-color: yellow;
+#input image {
+    color: @color13;
 }
 
-#outer-box {
-  margin: 5px;
-  border: 2px solid green;
-  background-color: green;
+#entry {
+    margin: 2px 0 2px 0;
+    padding: 3px 5px 3px 5px;
+    box-sizing: border-box;
 }
 
-#scroll {
-  margin: 5px;
-  border: 2px solid orange;
-  background-color: orange;
+#entry:selected {
+    background: @color8;
+    border: none;
+    border-radius: 4px;
 }
 
 #text {
-  margin: 5px;
-  border: 2px solid cyan;
-  background-color: cyan;
+    color: @color15;
 }
 
-/* Page styling to appear more like wofi does */
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 60vh;
+#img {
+    margin-right: 10px;
 }
+
+/* parent div of input and scroll */
+#outer-box {
+    margin: 0px;
+    padding: 8px;
+    border-radius: 12px;
+    border: 2px solid @color5;
+    background-color: @background;
+    opacity: 0.95
+}
+
+/* parent div of inner-box */
+#scroll {
+    margin: 7px;
+    background: none;
+}
+
+/* entry container */
+#inner-box {
+    background: none;
+}
+
 window {
-  width: 30%;
-  display: block;
-}
-
-input {
-  width: calc(100% - 20px);
-}
-ul {
-  list-style: none;
-  padding: 0;
-}
-li {
-  margin: 10px;
+    width: 30%;
+    display: block;
 }
 
