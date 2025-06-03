@@ -10,7 +10,15 @@
 
 .modules-left {
   padding-top: 6px;
-  padding-left: 12px;
+  padding-left: 10px;
+}
+
+#custom-launcher {
+  padding-left: 8px;
+  padding-right: 5px;
+  background-color: #333333;
+  color: #1793d1;
+  border-radius: 10px;
 }
 
 #workspaces {
@@ -46,11 +54,33 @@ window#waybar {
 
 .modules-right {
   padding-top: 6px;
-  padding-right: 12px;
+  padding-right: 10px;
 }
 
-#wireplumber, #network, #bluetooth, #clock {
+#battery, #battery.bat1, #wireplumber, #network, #bluetooth, #clock {
   margin-left: 10px;
+}
+
+#battery, #battery.bat1 {
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  background-color: @color8;
+}
+
+#battery.default, #battery.bat1.default {
+  color: @background;
+  background-color: @color2;
+}
+
+#battery.warning, #battery.bat1.warning {
+  color: @background;
+  background-color: @color3;
+}
+
+#battery.critical, #battery.bat1.critical {
+  color: @background;
+  background-color: @color1;
 }
 
 #wireplumber {
@@ -59,7 +89,7 @@ window#waybar {
   border-radius: 10px;
   transition: none;
   color: @background;
-  background: @color2;
+  background: @color4;
 }
 
 #network {
@@ -68,7 +98,7 @@ window#waybar {
   border-radius: 10px;
   transition: none;
   color: @background;
-  background: @color3;
+  background: @color5;
 }
 
 #bluetooth {
@@ -77,16 +107,15 @@ window#waybar {
   border-radius: 10px;
   transition: none;
   color: @background;
-  background: @color4;
+  background: @color6;
 }
 
 #clock {
-  margin-right: 8px;
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 10px;
   transition: none;
   color: @background;
-  background: @color5;
+  background: @color7;
 }
 
