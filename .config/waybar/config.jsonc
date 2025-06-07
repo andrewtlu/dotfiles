@@ -76,6 +76,7 @@
         "tooltip": false,
         "format-wifi": "  {essid}",
         "format-ethernet": "  {ifname}",
+        "format-disconnected": " ",
         "on-click": "kitty -- impala"
     },
 
