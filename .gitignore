@@ -1,11 +1,15 @@
 Pictures/*
+.config/*
+**/__pycache__/
 !Pictures/Wallpapers
 !Pictures/Wallpapers/**
-.config/*
 !.config/hypr
+!.config/hypr/**
 !.config/kitty
 !.config/nvim
 !.config/waybar
 !.config/wofi
 !.config/*.json
 
+# re-ignore pycache in explicit include
+.config/**/__pycache__/

@@ -10,7 +10,7 @@
 
 .modules-left {
   padding-top: 6px;
-  padding-left: 10px;
+  padding-left: 8px;
 }
 
 #custom-launcher {
@@ -54,10 +54,10 @@ window#waybar {
 
 .modules-right {
   padding-top: 6px;
-  padding-right: 10px;
+  padding-right: 8px;
 }
 
-#battery, #battery.bat1, #wireplumber, #network, #bluetooth, #clock {
+#battery, #battery.bat1, #backlight, #wireplumber, #network, #bluetooth, #clock {
   margin-left: 10px;
 }
 
@@ -83,6 +83,15 @@ window#waybar {
   background-color: @color1;
 }
 
+#backlight {
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  transition: none;
+  color: @background;
+  background-color: @color4;
+}
+
 #wireplumber {
   padding-left: 10px;
   padding-right: 10px;
@@ -98,7 +107,7 @@ window#waybar {
   border-radius: 10px;
   transition: none;
   color: @background;
-  background: @color5;
+  background: @color4;
 }
 
 #bluetooth {
@@ -107,7 +116,7 @@ window#waybar {
   border-radius: 10px;
   transition: none;
   color: @background;
-  background: @color6;
+  background: @color4;
 }
 
 #clock {
