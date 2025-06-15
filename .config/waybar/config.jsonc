@@ -62,17 +62,20 @@
     },
 
     "backlight": {
+        "tooltip": false,
         "interval": 2,
         "format": "{icon} {percent}%",
         "format-icons": ["", "", "", "", "", "", "", "", ""],
     },
 
     "wireplumber": {
-        "tooltip": false,
+        "tooltip": true,
+        "exec": "python ~/.config/waybar/scripts/sinks.py",
         "scroll-step": 5,
         "format": "{icon} {volume}%",
         "format-muted": "󰝟 {volume}%",
         "on-click": "kitty -- alsamixer -V all",
+        "on-click-right": "python ~/.config/waybar/scripts/sinks.py -1",
         "format-icons": {
             "default": ["", "", ""]
         }

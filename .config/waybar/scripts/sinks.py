@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import subprocess
+from sys import argv
 
 def clean_input() -> str:
     output = str(subprocess.check_output("wpctl status", shell=True, encoding='utf-8'))
@@ -51,4 +52,22 @@ def current_sink_id() -> int:
 
 def current_sink_name() -> str:
     return current_sink()[1]
+
+
+def switch_sink(id: str="-1") -> None:
+    """Switches to the next available audio sink."""
+    sinks = get_sinks()
+
+    if len(sinks) > 1:
+        if id in [sink[0] for sink in sinks]:
+            subprocess.run(f"wpctl set-default {id}", shell=True)
+        else:
+            subprocess.run(f"wpctl set-default {sinks[1][0]}", shell=True)
+
+
+if __name__ == "__main__":
+    if (len(argv) == 1):
+        print(current_sink_name())
+    if (len(argv) == 2):
+        switch_sink(argv[1])
 
