@@ -33,11 +33,11 @@
         "format-charging": " {icon} {capacity}% ({time})",
         "format-discharging": "{icon} {capacity}% ({time})",
         "format-full": " {icon} charged",
-        "interval": 30,
+        "interval": 15,
         "states": {
             "default": 100,
-            "warning": 25,
-            "critical": 10
+            "warning": 35,
+            "critical": 15
         },
         "tooltip": false,
         "on-click": "kitty -- battop"
@@ -51,11 +51,11 @@
         "format-charging": " {icon} {capacity}% ({time})",
         "format-discharging": "{icon} {capacity}% ({time})",
         "format-full": " {icon} charged",
-        "interval": 30,
+        "interval": 15,
         "states": {
             "default": 100,
-            "warning": 25,
-            "critical": 10
+            "warning": 35,
+            "critical": 15
         },
         "tooltip": false,
         "on-click": "kitty -- battop"
@@ -66,6 +66,11 @@
         "interval": 2,
         "format": "{icon} {percent}%",
         "format-icons": ["", "", "", "", "", "", "", "", ""],
+        "states": {
+            "bright": 80,
+            "normal": 50,
+            "dim": 0
+        }
     },
 
     "wireplumber": {
@@ -78,6 +83,11 @@
         "on-click-right": "python ~/.config/waybar/scripts/sinks.py -1",
         "format-icons": {
             "default": ["", "", ""]
+        },
+        "states": {
+            "loud": 60,
+            "normal": 20,
+            "quiet": 0
         }
     },
 
@@ -92,7 +102,7 @@
     "bluetooth": {
         "format-on": "󰂯",
         "format-off": "󰂲",
-        "format-connected-battery": "{device_battery_percentage}% 󰂯",
+        "format-connected-battery": "󰂯 {device_battery_percentage}%",
         "tooltip": false,
         "on-click": "kitty -- bluetui"
     },

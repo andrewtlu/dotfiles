@@ -59,72 +59,108 @@ window#waybar {
 
 #battery, #battery.bat1, #backlight, #wireplumber, #network, #bluetooth, #clock {
   margin-left: 10px;
-}
-
-#battery, #battery.bat1 {
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 10px;
-  background-color: @color8;
+  color: @background;
+  background-color: @foreground;
+}
+
+
+/* battery styles */
+
+#battery, #battery.bat1 {
+  color: @background;
+  background: @color8;
 }
 
 #battery.default, #battery.bat1.default {
-  color: @background;
-  background-color: @color2;
+  background: @color2;
 }
 
 #battery.warning, #battery.bat1.warning {
-  color: @background;
-  background-color: @color3;
+  background: @color3;
 }
 
 #battery.critical, #battery.bat1.critical {
-  color: @background;
-  background-color: @color1;
+  background: @color1;
 }
 
-#backlight {
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 10px;
-  transition: none;
-  color: @background;
-  background-color: @color4;
+
+/* backlight styles */
+
+#backlight.bright {
+  background: @color1;
 }
 
-#wireplumber {
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 10px;
-  transition: none;
-  color: @background;
+#backlight.normal {
+  background: @color3;
+}
+
+#backlight.dim {
+  background: @color2;
+}
+
+/* sound styles */
+
+#wireplumber.loud {
+  background: @color1;
+}
+
+#wireplumber.normal {
+  background: @color3
+}
+
+#wireplumber.quiet {
+  background: @color2
+}
+
+#wireplumber.muted {
+  background: @color5
+}
+
+tooltip {
+  background: @background;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+
+/* network styles */
+
+#network.wifi, #network.ethernet {
+  background: @color2;
+}
+
+#network.disconnected {
+  background: @color3;
+}
+
+/* doesn't work atm, see https://github.com/Alexays/Waybar/issues/2259 */
+#network.disabled {
+  background: @color1;
+}
+
+
+/* bluetooth styles */
+
+#bluetooth.connected {
   background: @color4;
 }
 
-#network {
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 10px;
-  transition: none;
-  color: @background;
-  background: @color4;
+#bluetooth.on {
+  background: @color6;
 }
 
-#bluetooth {
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 10px;
-  transition: none;
-  color: @background;
-  background: @color4;
+#bluetooth.off {
+  background: @color1;
 }
+
+
+/* clock styles */
 
 #clock {
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 10px;
-  transition: none;
-  color: @background;
-  background: @color7;
 }
 
