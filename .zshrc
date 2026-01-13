@@ -1,6 +1,24 @@
 fastfetch
 alias connect='iwctl station wlan0 connect EmoryUnplugged'
 
+# ovpn connect alias
+ovpn() {
+    if [ -z "$1" ]; then
+        echo "Usage: ovpn <config-file.ovpn>"
+        return 1
+    fi
+    if [ ! -f "$1" ]; then
+        echo "Error: Config file '$1' not found"
+        return 1
+    fi
+    if [ ! -f ~/VPN/pass.txt ]; then
+        echo "Error: Credential files not found"
+        echo "Expected: ~/VPN/pass.txt"
+        return 1
+    fi
+    sudo openvpn --config "$1" --auth-user-pass ~/VPN/pass.txt
+}
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
