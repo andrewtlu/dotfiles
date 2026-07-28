@@ -5,13 +5,13 @@
 # when authenticating, message is overridden with "authenticating..."
 
 msg="$1"
+LOG_FILE="/tmp/hyprlock-state.log"
 
-# check if pam is authenticating (default 1 module, if > 1 then is authenticating)
-HYPRLOCK_PID=$(pgrep hyprlock)
-if [ -n "$HYPRLOCK_PID" ]; then
-    PAM_MODULE_COUNT=$(lsof -p $HYPRLOCK_PID 2>/dev/null | grep -c "/usr/lib/security/pam_")
+if [ -f "$LOG_FILE" ]; then
+    # last relevant state line: either "Authenticating" (Enter pressed) or "Failed attempts" (result known)
+    last_state=$(grep -E '\]: (Authenticating|Failed attempts)' "$LOG_FILE" 2>/dev/null | tail -n 1)
 
-    if [ "$PAM_MODULE_COUNT" -gt 1 ]; then
+    if [[ "$last_state" == *"Authenticating"* ]]; then
         echo "authenticating..."
         exit 0
     fi
