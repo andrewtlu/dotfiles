@@ -1,5 +1,6 @@
 fastfetch
 alias connect='iwctl station wlan0 connect EmoryUnplugged'
+bindkey '^H' backward-kill-word
 
 # ovpn connect alias
 ovpn() {
